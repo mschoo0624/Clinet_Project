@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block page_content %}
+      <div class="container">
+          <div class="row">
+              <div class="col-3">
+              </div>
+              <div class="col-5 bg-light shadow-lg rounded mt-5 p-4">
+                  <div class="text-center mb-3">
+                      <h5>
+                          Add The New Player
+                      </h5>
+                  </div>
+                  <form method="post" action="{% url 'add_player' %}">
+                      {% csrf_token %}
+                      <div class="mb-3">
+                        <input type="text" class="form-control" id="playerName" aria-describedby="playerNameHelp" name="playerName"
+                        placeholder="Enter the Player's Name" required>
+                      </div>
+                      <div class="mb-3">
+                        <input type="text" class="form-control" id="mobile" aria-describedby="mobileHelp" name="mobile"
+                        placeholder="Enter Mobile Number" required>
+                      </div>
+                      <div class="mb-3">
+                        <select class="form-select" aria-label="Default select example" name="position" required>
+                          <option selected disabled>Select Position</option>
+                          <option value="striker">Striker</option>
+                          <option value="midfielder">Midfielder</option>
+                          <option value="defender">Defender</option>
+                          <option value="goalkeeper">Goalkeeper</option>
+                        </select>
+                      </div>
+                      <div class="mb-3">
+                        <input type="date" class="form-control" id="dob" aria-describedby="dobHelp" name="dob"
+                        placeholder="Enter date of birth" required>
+                      </div>
+                      <div class="mb-3">
+                        <select class="form-select" aria-label="Default select example" name="nationality" required>
+                          <option selected disabled>Select Nationality</option>
+                          <option value="southkorea">SouthKorea</option>
+                          <option value="india">India</option>
+                          <option value="denmark">Denmark</option>
+                        </select>
+                      </div>
+                      <div class="mb-3">
+                          <div class="text-center">
+                              <button type="submit" class="btn btn-primary col-12">
+                                  Add Player
+                              </button>
+                          </div>
+                      </div>
+                    </form>
+              </div>
+              <div class="col-4">
+
+              </div>
+          </div>
+
+      </div>
+
+{%endblock%}

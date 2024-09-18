@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block page_content %}
+      <div class="container">
+          <div class="row">
+              <div class="col-3">
+                  <div class="list-group">
+                      <a href="#" class="list-group-item list-group-item-action active">All players</a>
+                      <a href="{% url 'players' 1 %}" class="list-group-item list-group-item-action">Under 11</a>
+                      <a href="{% url 'players' 2 %}" class="list-group-item list-group-item-action">Under 14</a>
+                      <a href="{% url 'players' 3 %}" class="list-group-item list-group-item-action">Under 16</a>
+                      <a href="{% url 'players' 4 %}" class="list-group-item list-group-item-action">Under 18</a>
+                      <a href="{% url 'players' 5 %}" class="list-group-item list-group-item-action">Second division</a>
+                  </div>
+                  <br>
+                  <div class="list-group">
+                    <a href="/search_player" style="font-weight: bold;" class="list-group-item list-group-item-action active">Search player</a>
+                  </div>
+              </div>
+              <div class="col-9">
+                  <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">Name</th>
+                          <th scope="col">Mobile Number</th>
+                          <th scope="col">Position</th>
+                          <th scope="col">Date Of Birth</th>
+                          <th scope="col">Nationality</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                       {% for player in players %}
+                         <tr>
+                             <td>{{ player.name| title }}</td>
+                             <td>{{ player.mobile }}</td>
+                             <td>{{ player.position| title }}</td>
+                             <td>{{ player.dob }}</td>
+                             <td>{{ player.nationality| title }}</td>
+                         </tr>
+                      {% endfor %}
+                        </tbody>
+                    </table>
+              </div>
+          </div>
+
+      </div>
+{%endblock%}

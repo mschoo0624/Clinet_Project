@@ -1,0 +1,109 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Home &middot; FC Hwasung </title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css\bootstrap.min.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css\all.min.css'%}">
+    <script src="{% static 'js\bootstrap.min.js' %}"></script>
+
+</head>
+<body>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'home' %}">FC Hwasung</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+               <!-- <li class="nav-item">
+                  <a class="nav-link" href="{% url 'players' 0 %}">Player</a>
+                 </li> -->
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">About</a>
+                </li>
+              </ul>
+              <span class="navbar-text">
+                <button class="btn">Log Out</button>
+              </span>
+            </div>
+          </div>
+        </nav>
+        </div>
+        <div class="container">
+             <div class="row">
+                            <div class="col-6">
+                                <figure class="figure">
+                                  <img src="{% static 'img/about.jpg' %}"
+                                       class="figure-img img-fluid rounded" alt="FC Hwasung Image">
+                                  <figcaption class="figure-caption">FC Hwasung @2021</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-6">
+                                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                                  <div class="container-fluid">
+                                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                      <span class="navbar-toggler-icon"></span>
+                                    </button>
+                                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                        <li class="nav-item">
+                                          <a class="nav-link active" aria-current="page" href="https://www.instagram.com/hsfc2013/?hl=ko" target="_blank"><i class="fab fa-instagram"></i></a>
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link" href="https://www.youtube.com/channel/UCxKEldsuGD4SmJvDO_UT8kQ" target="_blank"><i class="fab fa-youtube"></i></a>
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link" href="https://www.facebook.com/hwasungfc/" target="_blank" tabindex="-1" aria-disabled="true"><i class="fab fa-facebook-f"></i></a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </nav>
+                                <div class="accordion" id="accordionExample">
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        History of FC Hwasung
+                                      </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                      <div class="accordion-body">
+                                        <strong>This is the history of FC Hwasung.</strong> Hwaseong Football Club (Hwaseong Football Club) is a Korean football team founded on January 23, 2013 based in Hwaseong-si, Gyeonggi-do, and is currently participating in the K3 League He won the K3 League for the first time in the 2014 season.
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        History of FC Hwasung
+                                      </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                      <div class="accordion-body">
+                                        <strong>History of FC Hwasung.</strong> The club was founded on 23 January 2013 The team managed to finish top of their group in their first season, but lost to Pocheon FC in the playoff stage. In only their second year of competition the club again finished top of their group and progressed to the final where they defeated Pocheon FC to become the 2015 Champions..
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Youth Club of FC Hwasung
+                                      </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                      <div class="accordion-body">
+                                        <strong>.</strong> .
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+        </div>
+</body>
+</html>
